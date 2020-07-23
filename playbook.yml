@@ -9,13 +9,13 @@
         state: present
       when:
       - ansible_distribution == "CentOS"
-    - name: install python docker ubuntu
+    - name: install python-pip
       apt:
         name: python-pip
         state: present
       when:
       - ansible_distribution == "Ubuntu"
-    - name: install python docker ubuntu
+    - name: uninstall python docker ubuntu
       apt:
         name: python-docker
         state: absent
